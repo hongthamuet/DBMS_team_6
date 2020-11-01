@@ -42,6 +42,31 @@
           </tr>
         </thead>
        <tbody>
+       @foreach ($all_category_product as $key => $cate_pro)
+       <tr>
+            <td><label class="i-checks m-b-none"><input type="checkbox" name="post[]"><i></i></label></td>
+
+            <td>{{ $cate_pro->category_name }}</td>
+             <td><span class="text-ellipsis"> <?php
+                    if($cate_pro->category_status == 0){
+                        echo 'Ẩn';
+                    }
+                        else {
+                            echo'Hiển thị';
+                        }
+                 ?>   
+                </span>
+            </td>
+            <td>
+                <a href="" class="active" ui-toggle-class="">
+                    <i class="fa fa-pencil-square-o text-success text-active"></i>
+                </a>
+                <a href="" class="active" ui-toggle-class="">
+                    <i class="fa fa-trash-o text-danger text"></i>
+                </a>
+            </td>
+          </tr>
+          @endforeach
        </tbody>
       </table>
     </div>
