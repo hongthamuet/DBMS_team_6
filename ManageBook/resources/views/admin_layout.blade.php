@@ -129,7 +129,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
  <!-- footer -->
 		  <div class="footer">
 			<div class="wthree-copyright">
-			  <p>© 2020 Visitors. All rights reserved | Design by PaVaNa</p>
+			  <p style="text-align:center"><img src = '././Images/background.jpg' style="width:auto;height:400px;margin:auto"></p>
 			</div>
 		  </div>
   <!-- / footer -->

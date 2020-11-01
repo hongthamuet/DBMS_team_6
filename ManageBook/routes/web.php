@@ -21,3 +21,6 @@ Route::get('/', function () {
 });
 
 Route::get('/admin', 'App\Http\Controllers\AdminController@index');
+Route::get('/dashboard','App\Http\Controllers\AdminController@show_dashboard');
+Route::post('/admin-dashboard', 'App\Http\Controllers\AdminController@dashboard');
+Route::get('/logout', 'App\Http\Controllers\AdminController@log_out');
