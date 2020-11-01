@@ -19,3 +19,5 @@ Route::get('/', function(){
 Route::get('/', function () {
     return view('admin_layout');
 });
+
+Route::get('/admin', 'App\Http\Controllers\AdminController@index');
