@@ -30,3 +30,8 @@ Route::get('/logout', 'App\Http\Controllers\AdminController@log_out');
 Route::get('/all-category-product', 'App\Http\Controllers\CategoryProduct@all_category_product');
 Route::get('/add-category-product', 'App\Http\Controllers\CategoryProduct@add_category_product');
 Route::post('/save-category-product', 'App\Http\Controllers\CategoryProduct@save_category_product');
+ 
+//author
+Route::get('/all-author', 'App\Http\Controllers\AuthorController@all_author');
+Route::get('/add-author', 'App\Http\Controllers\AuthorController@add_author');
+Route::post('/save-author', 'App\Http\Controllers\AuthorController@save_author');
