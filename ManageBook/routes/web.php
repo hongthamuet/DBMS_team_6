@@ -40,9 +40,19 @@ Route::post('/update-category-product/{id}', 'App\Http\Controllers\CategoryProdu
 Route::post('/save-category-product', 'App\Http\Controllers\CategoryProduct@save_category_product');
 
 //author
-Route::get('/all-author', 'App\Http\Controllers\AuthorController@all_author');
+
 Route::get('/add-author', 'App\Http\Controllers\AuthorController@add_author');
+Route::get('/edit-author/{id}', 'App\Http\Controllers\AuthorController@edit_author');
+Route::get('/delete-author/{id}', 'App\Http\Controllers\AuthorController@delete_author');
+
+Route::get('/all-author', 'App\Http\Controllers\AuthorController@all_author');
+
+Route::get('/unactive-author/{id}', 'App\Http\Controllers\AuthorController@unactive_author');
+Route::get('/active-author/{id}', 'App\Http\Controllers\AuthorController@active_author');
+
 Route::post('/save-author', 'App\Http\Controllers\AuthorController@save_author');
+
+Route::post('/update-author/{id}', 'App\Http\Controllers\AuthorController@update_author');
 
 //product
 Route::get('/add-product', 'App\Http\Controllers\ProductController@add_product');

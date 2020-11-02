@@ -54,7 +54,7 @@ class AuthorController extends Controller
     	Session::put('message','Thêm tác giả thành công');
     	return Redirect::to('all-author');
     }
-    /*
+    
     public function unactive_author($id){
         $this->AuthLogin();
     	DB::table('tbl_author')->where('author_id',$id)->update(['author_status'=> 1]); 
@@ -115,5 +115,5 @@ class AuthorController extends Controller
         $author_name = DB::table('tbl_author')->where('tbl_author.author_id', $id)->limit(1)->get();
         
         return view('pages.author.show_author')->with('cate_product', $cate_product)->with('author', $author)->with('categoryById', $productByIdAuthor)->with('author_name', $author_name)->with('banchay_product', $SpBanChayNhat);
-    }*/
+    }
 }
