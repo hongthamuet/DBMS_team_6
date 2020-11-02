@@ -37,6 +37,39 @@ class CategoryProduct extends Controller
         
         DB::table('tbl_category_product')->insert($data);
         Session::put('message','Thêm danh mục thể loại thành công');
-        return Redirect::to('add-category-product');
+        return Redirect::to('all-category-product');
+    }
+    public function unactive_category_product($id){
+        $this->AuthLogin();
+    	DB::table('tbl_category_product')->where('category_id',$id)->update(['category_status'=> 1]); 
+    	Session::put('message','Kích hoạt danh mục sản phẩm thành công');
+    	return Redirect::to('all-category-product');
+    }
+    public function active_category_product($id){
+        $this->AuthLogin();
+    	DB::table('tbl_category_product')->where('category_id',$id)->update(['category_status'=> 0]); 
+    	Session::put('message','Không kích hoạt danh mục sản phẩm thành công');
+    	return Redirect::to('all-category-product');
+    }
+    public function edit_category_product($id){
+        $this->AuthLogin();
+    	$edit_category_product = DB::table('tbl_category_product')->where('category_id',$id)->get();
+    	$manager_category_product = view('admin.edit_category_product')->with('edit_category_product', $edit_category_product);
+    	return view('admin_layout')->with('admin.edit_category_product', $manager_category_product);
+    }
+    public function update_category_product(Request $request, $id){
+        $this->AuthLogin();
+    	$data = array();
+    	$data['category_name'] = $request->category_product_name;
+    	$data['category_desc'] = $request->category_product_desc;
+    	DB::table('tbl_category_product')->where('category_id',$id)->update($data);
+    	Session::put('message','Cập nhật danh mục sản phẩm thành công');
+    	return Redirect::to('all-category-product');
+    }
+    public function delete_category_product(Request $request, $id){
+        $this->AuthLogin();
+    	DB::table('tbl_category_product')->where('category_id',$id)->delete();
+    	Session::put('message','Xóa danh mục sản phẩm thành công');
+    	return Redirect::to('all-category-product');
     }
 }
