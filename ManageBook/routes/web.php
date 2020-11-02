@@ -12,14 +12,15 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+/*
 Route::get('/', function(){
     return view('welcome');
 });
-/*
+*/
+
 Route::get('/', function () {
     return view('admin_layout');
-});*/
+});
 //Backend
 Route::get('/admin', 'App\Http\Controllers\AdminController@index');
 Route::get('/dashboard','App\Http\Controllers\AdminController@show_dashboard');
@@ -42,3 +43,16 @@ Route::post('/save-category-product', 'App\Http\Controllers\CategoryProduct@save
 Route::get('/all-author', 'App\Http\Controllers\AuthorController@all_author');
 Route::get('/add-author', 'App\Http\Controllers\AuthorController@add_author');
 Route::post('/save-author', 'App\Http\Controllers\AuthorController@save_author');
+
+//product
+Route::get('/add-product', 'App\Http\Controllers\ProductController@add_product');
+Route::get('/edit-product/{id}', 'App\Http\Controllers\ProductController@edit_product');
+Route::get('/delete-product/{id}', 'App\Http\Controllers\ProductController@delete_product');
+
+Route::get('/all-product', 'App\Http\Controllers\ProductController@all_product');
+
+Route::get('/unactive-product/{id}', 'App\Http\Controllers\ProductController@unactive_product');
+Route::get('/active-product/{id}', 'App\Http\Controllers\ProductController@active_product');
+
+Route::post('/save-product', 'App\Http\Controllers\ProductController@save_product');
+Route::post('/update-product/{id}', 'App\Http\Controllers\ProductController@update_product');
