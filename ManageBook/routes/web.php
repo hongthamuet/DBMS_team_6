@@ -18,7 +18,10 @@ Route::get('/', function(){
 });
 */
 
+//frontend
 Route::get('/','App\Http\Controllers\HomeController@index');
+Route::get('/trang-chu', 'App\Http\Controllers\HomeController@index');
+Route::post('/tim-kiem', 'App\Http\Controllers\HomeController@tim_kiem');
 
 
 Route::get('/chi-tiet-san-pham/{id}', 'App\Http\Controllers\ProductController@show_product_detail');
