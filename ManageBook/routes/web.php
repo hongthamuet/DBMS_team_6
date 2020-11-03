@@ -18,9 +18,11 @@ Route::get('/', function(){
 });
 */
 
-Route::get('/', function () {
-    return view('admin_layout');
-});
+Route::get('/','App\Http\Controllers\HomeController@index');
+
+
+Route::get('/chi-tiet-san-pham/{id}', 'App\Http\Controllers\ProductController@show_product_detail');
+
 //Backend
 Route::get('/admin', 'App\Http\Controllers\AdminController@index');
 Route::get('/dashboard','App\Http\Controllers\AdminController@show_dashboard');
@@ -66,3 +68,5 @@ Route::get('/active-product/{id}', 'App\Http\Controllers\ProductController@activ
 
 Route::post('/save-product', 'App\Http\Controllers\ProductController@save_product');
 Route::post('/update-product/{id}', 'App\Http\Controllers\ProductController@update_product');
+
+//Thêm vào giỏ hàng
