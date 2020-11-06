@@ -46,3 +46,16 @@ INSERT INTO `tbl_product` (`product_id`,`product_name`,`category_id`,`author_id`
 (7, 'Doraemon', 3, 6,'Doraemon.jpg','Bộ truyện tình trạng vẫn còn mới, được cập nhật đến tập mới nhất.','Bộ truyện kể về một chú mèo máy tên là Doraemon đến từ thế kỷ 22 để giúp một cậu bé cấp 1 hậu đậu tên là Nobi Nobita. Các câu chuyện của Doraemon thường ngắn gọn, dễ hiểu, dí dỏm và mang cái nhìn lạc quan về cuộc sống tương lai cũng như sự phát triển của khoa học kĩ thuật.',123, '28.000 vnđ',1,null,null),
 (8, 'Tôi thấy hoa vàng trên cỏ xanh', 1, 8, 'ToiThayHoaVangTrenCoXanh.jpg','Trọn bộ sản phẩm hiện có 4 quyển','Tiểu thuyết là một câu chuyện đầy cảm xúc về quê hương, về gia đình, về thời niên thiếu của mỗi người. Cậu bé Tường ngây thơ, đầy tình thương trong khi Thiều là người anh trai ích kỷ, hẹp hòi đến tàn nhẫn. Bên cạnh tình cảm anh em với những yêu thương, ghen ghét, đố kỵ, hối tiếc, ăn năn… còn là tình cảm bạn bè, kỷ niệm thời thơ ấu của lũ trẻ nhà quê nghèo ở miền Trung cuối những năm 1980. Ở đó có những cuộc cãi vã, đánh nhau; những trò chơi trẻ con thú vị; những giấc mơ cổ tích công chúa, hoàng tử; những hờn giận vu vơ, rung động đầu đời…',257,'99.000 vnđ',1,null,null),
 (9, 'Mắt Biếc', 1, 8, 'MatBiec.png', 'Trọn bộ sản phẩm gồm 4 quyển','Mắt biếc kể về cuộc đời của nhân vật chính tên Ngạn. Ngạn sinh ra và lớn lên ở một ngôi làng tên là làng Đo Đo (thuộc xã Bình Quế - huyện Thăng Bình - tỉnh Quảng Nam - cũng là nguyên quán của tác giả). Lớn lên cùng với Ngạn là cô bạn hàng xóm có đôi mắt tuyệt đẹp tên là Hà Lan. Tuổi thơ của Ngạn và Hà Lan gắn bó với bao nhiêu kỉ niệm cùng đồi sim, đánh trống trường... Tình bạn trẻ thơ dần dần biến thành tình yêu thầm lặng của Ngạn dành cho Hà Lan....', 256, '91.000 vnđ',1,null,null);
+
+
+--
+-- Cấu trúc bảng tbl_customer
+INSERT INTO `tbl_customer` (`customer_id`,`customer_name`,`customer_email`,`customer_password`,`customer_phone`,`customer_address`,`created_at`, `updated_at`) VALUES 
+
+--
+-- Cấu trúc bảng tbl_shipping
+INSERT INTO `tbl_shipping` (`shipping_id`,`shipping_name`,`shipping_address`,`shipping_phone`,`shipping_email`,`shipping_note`,`created_at`, `updated_at`) VALUES 
+
+--
+-- Cấu trúc bảng tbl_order_details
+INSERT INTO `tbl_order_details` (`order_details_id`,`order_id`,`product_id`,`product_name`,`product_price`,`product_sales_quantity`,`created_at`, `updated_at`) VALUES 

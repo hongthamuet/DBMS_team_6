@@ -73,3 +73,18 @@ Route::post('/save-product', 'App\Http\Controllers\ProductController@save_produc
 Route::post('/update-product/{id}', 'App\Http\Controllers\ProductController@update_product');
 
 //Thêm vào giỏ hàng
+Route::post('/save-cart', 'App\Http\Controllers\CartController@save_cart');
+Route::post('/update-cart-quantity', 'App\Http\Controllers\CartController@update_cart_quantity');
+Route::get('/show-cart', 'App\Http\Controllers\CartController@show_cart');
+Route::get('/delete-to-cart/{id}', 'App\Http\Controllers\CartController@delete_to_cart');
+
+
+//Thanh toán
+Route::get('/login-checkout', 'App\Http\Controllers\CheckoutController@login_checkout');
+Route::post('/add-customer', 'App\Http\Controllers\CheckoutController@add_customer');
+Route::post('/order-place', 'App\Http\Controllers\CheckoutController@order_place');
+Route::get('/checkout', 'App\Http\Controllers\CheckoutController@checkout');
+Route::post('/save-checkout-customer', 'App\Http\Controllers\CheckoutController@save_checkout_customer');
+
+//Đơn hàng
+Route::get('/payment', 'App\Http\Controllers\CheckoutController@payment');
