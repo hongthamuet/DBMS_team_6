@@ -88,3 +88,4 @@ Route::post('/save-checkout-customer', 'App\Http\Controllers\CheckoutController@
 
 //Đơn hàng
 Route::get('/payment', 'App\Http\Controllers\CheckoutController@payment');
+Route::get('/manage-order', 'App\Http\Controllers\CheckoutController@manage_order');
