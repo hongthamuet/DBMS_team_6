@@ -23,7 +23,9 @@ Route::get('/','App\Http\Controllers\HomeController@index');
 Route::get('/trang-chu', 'App\Http\Controllers\HomeController@index');
 Route::post('/tim-kiem', 'App\Http\Controllers\HomeController@tim_kiem');
 
-
+//Danh mục Thể loại sách frontend
+Route::get('/danh-muc-sp/{id}', 'App\Http\Controllers\CategoryProduct@show_category_home');
+Route::get('/tac-gia/{id}', 'App\Http\Controllers\AuthorController@show_author_home');
 Route::get('/chi-tiet-san-pham/{id}', 'App\Http\Controllers\ProductController@show_product_detail');
 
 //Backend
