@@ -15,11 +15,12 @@ class CreateTblAuthor extends Migration
     {
         Schema::create('tbl_author', function (Blueprint $table) {
             $table->Increments('author_id');
-            $table->string('author_name');
+            $table->string('author_name')->index();
             $table->string('author_image');
             $table->text('author_desc');
             $table->integer('author_status');
             $table->timestamps();
+            
         });
     }
 
