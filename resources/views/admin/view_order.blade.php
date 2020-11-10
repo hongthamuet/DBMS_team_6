@@ -64,7 +64,7 @@
             <td>{{$v_con->product_name}}</td>
             <td>{{$v_con->product_price}}</td>
             <td>{{$v_con->product_sales_quantity}}</td>
-            <td>{{$v_con->product_price}}</td>
+            <td>{{$v_con->product_price * $v_con->product_sales_quantity}}</td>
             
           </tr>
           @endforeach

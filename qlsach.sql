@@ -7,7 +7,11 @@
 
 -- Tạo index:
 Alter table tbl_product ADD INDEX idx_authorid(author_id);
-
+Alter table tbl_product add index idx_pro(product_id);
+Alter table tbl_author add index idx_author(author_id);
+Alter table tbl_category_product  add index idx_cateid(category_id);
+Alter table tbl_customer add index idx_customerid(customer_id);
+Alter table tbl_product add index idx_cate(category_id);
 
 
 
