@@ -70,12 +70,12 @@ INSERT INTO `tbl_product` (`product_id`,`product_name`,`category_id`,`author_id`
 
 --
 -- Cấu trúc bảng tbl_customer
-INSERT INTO `tbl_customer` (`customer_id`,`customer_name`,`customer_email`,`customer_password`,`customer_phone`,`customer_address`,`created_at`, `updated_at`) VALUES 
+--INSERT INTO `tbl_customer` (`customer_id`,`customer_name`,`customer_email`,`customer_password`,`customer_phone`,`customer_address`,`created_at`, `updated_at`) VALUES 
 
 --
 -- Cấu trúc bảng tbl_shipping
-INSERT INTO `tbl_shipping` (`shipping_id`,`shipping_name`,`shipping_address`,`shipping_phone`,`shipping_email`,`shipping_note`,`created_at`, `updated_at`) VALUES 
+--INSERT INTO `tbl_shipping` (`shipping_id`,`shipping_name`,`shipping_address`,`shipping_phone`,`shipping_email`,`shipping_note`,`created_at`, `updated_at`) VALUES 
 
 --
 -- Cấu trúc bảng tbl_order_details
-INSERT INTO `tbl_order_details` (`order_details_id`,`order_id`,`product_id`,`product_name`,`product_price`,`product_sales_quantity`,`created_at`, `updated_at`) VALUES 
+--INSERT INTO `tbl_order_details` (`order_details_id`,`order_id`,`product_id`,`product_name`,`product_price`,`product_sales_quantity`,`created_at`, `updated_at`) VALUES 
